@@ -1,6 +1,6 @@
 # M.A Physics - Website Instructions
 
-This is a production-ready single-page website for M.A Physics (Mamon Aktar).
+This is a production-ready single-page website for M.A Physics (Mamun Akhtar).
 
 ## How to use
 1. **Local Development**: Run `npm run dev` to see the site in the AI Studio preview.

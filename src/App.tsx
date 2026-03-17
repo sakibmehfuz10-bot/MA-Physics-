@@ -25,7 +25,7 @@ import { motion, AnimatePresence } from 'motion/react';
 // Constants
 const PHONE_NUMBER = "+91 77976 15088";
 const PHONE_CLICKABLE = "tel:+917797615088";
-const TUTOR_NAME = "Mamon Aktar";
+const TUTOR_NAME = "Mamun Akhtar";
 const YOUTUBE_URL = "https://youtube.com/@mamunakhtar8866?si=lerIG5jer97z4TTt";
 
 const WhatsAppIcon = ({ size = 24, className = "" }: { size?: number; className?: string }) => (
@@ -345,7 +345,7 @@ export default function App() {
                 <h2 className="text-sm font-bold uppercase tracking-widest text-cyan-600 dark:text-cyan-400 mb-4">About the Tutor</h2>
                 <h3 className="text-4xl font-bold mb-6">{TUTOR_NAME}</h3>
                 <p className="text-lg text-neutral-600 dark:text-neutral-400 mb-8 leading-relaxed">
-                  Mamon Aktar is an experienced physics tutor with a strong academic background. He focuses on clear concept delivery, worked examples, and regular mock tests to prepare students for boards and competitive exams.
+                  Mamun Akhtar is an experienced physics tutor with a strong academic background. He focuses on clear concept delivery, worked examples, and regular mock tests to prepare students for boards and competitive exams.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {[
@@ -642,7 +642,7 @@ export default function App() {
             </a>
           </div>
           <div className="text-sm text-neutral-500 dark:text-neutral-500">
-            © {new Date().getFullYear()} M.A Physics by Mamon Aktar. All rights reserved.
+            © {new Date().getFullYear()} M.A Physics by Mamun Akhtar. All rights reserved.
           </div>
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
             {NAV_ITEMS.map((item) => (
