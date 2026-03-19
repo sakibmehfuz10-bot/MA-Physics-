@@ -21,7 +21,6 @@ import {
   Youtube
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
-import Background3D from './components/Background3D';
 
 // Constants
 const PHONE_NUMBER = "+91 77976 15088";
@@ -164,8 +163,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-transparent text-neutral-900 dark:text-neutral-100 transition-colors duration-300 font-sans selection:bg-cyan-500/30">
-      <Background3D />
+    <div className="min-h-screen bg-white dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100 transition-colors duration-300 font-sans selection:bg-cyan-500/30">
       
       {/* Header */}
       <header className="fixed top-0 w-full z-50 bg-white/80 dark:bg-neutral-950/80 backdrop-blur-md border-b border-neutral-200 dark:border-neutral-800">
@@ -340,7 +338,7 @@ export default function App() {
         </section>
 
         {/* About Section */}
-        <section id="about" className="py-24 px-4 bg-neutral-50/50 dark:bg-neutral-900/30 backdrop-blur-sm">
+        <section id="about" className="py-24 px-4 bg-neutral-50 dark:bg-neutral-900/50">
           <div className="max-w-7xl mx-auto">
             <div className="grid md:grid-cols-2 gap-16 items-center">
               <FadeInSection>
@@ -546,7 +544,7 @@ export default function App() {
         </section>
 
         {/* Location Section */}
-        <section id="location" className="py-24 px-4 bg-neutral-50/50 dark:bg-neutral-900/30 backdrop-blur-sm">
+        <section id="location" className="py-24 px-4 bg-neutral-50 dark:bg-neutral-900/50">
           <div className="max-w-7xl mx-auto">
             <div className="grid md:grid-cols-2 gap-16 items-center">
               <FadeInSection>
