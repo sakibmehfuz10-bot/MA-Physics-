@@ -21,6 +21,7 @@ import {
   Youtube
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
+import Background3D from './components/Background3D';
 
 // Constants
 const PHONE_NUMBER = "+91 77976 15088";
@@ -163,7 +164,8 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100 transition-colors duration-300 font-sans selection:bg-cyan-500/30">
+    <div className="min-h-screen bg-transparent text-neutral-900 dark:text-neutral-100 transition-colors duration-300 font-sans selection:bg-cyan-500/30">
+      <Background3D />
       
       {/* Header */}
       <header className="fixed top-0 w-full z-50 bg-white/80 dark:bg-neutral-950/80 backdrop-blur-md border-b border-neutral-200 dark:border-neutral-800">
@@ -338,7 +340,7 @@ export default function App() {
         </section>
 
         {/* About Section */}
-        <section id="about" className="py-24 px-4 bg-neutral-50 dark:bg-neutral-900/50">
+        <section id="about" className="py-24 px-4 bg-neutral-50/50 dark:bg-neutral-900/30 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto">
             <div className="grid md:grid-cols-2 gap-16 items-center">
               <FadeInSection>
@@ -467,9 +469,19 @@ export default function App() {
                     <motion.div 
                       initial={{ rotate: -15, scale: 0.5, opacity: 0 }}
                       whileInView={{ rotate: 0, scale: 1, opacity: 1 }}
-                      whileHover={{ rotate: 12, scale: 1.15 }}
+                      whileHover={{ 
+                        rotate: [0, -10, 10, -10, 0],
+                        scale: 1.2,
+                        boxShadow: "0px 0px 20px rgba(34, 211, 238, 0.4)"
+                      }}
                       viewport={{ once: true }}
-                      transition={{ type: "spring", stiffness: 260, damping: 20, delay: i * 0.1 }}
+                      transition={{ 
+                        rotate: { duration: 0.4, ease: "easeInOut" },
+                        scale: { type: "spring", stiffness: 400, damping: 10 },
+                        boxShadow: { duration: 0.2 },
+                        opacity: { delay: i * 0.1 },
+                        default: { type: "spring", stiffness: 260, damping: 20, delay: i * 0.1 }
+                      }}
                       className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-white/5 text-cyan-400 mb-6 group-hover:bg-cyan-400/20 group-hover:text-cyan-300 transition-colors"
                     >
                       {method.icon}
@@ -534,7 +546,7 @@ export default function App() {
         </section>
 
         {/* Location Section */}
-        <section id="location" className="py-24 px-4 bg-neutral-50 dark:bg-neutral-900/50">
+        <section id="location" className="py-24 px-4 bg-neutral-50/50 dark:bg-neutral-900/30 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto">
             <div className="grid md:grid-cols-2 gap-16 items-center">
               <FadeInSection>
